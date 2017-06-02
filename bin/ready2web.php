@@ -1,7 +1,11 @@
 #!/usr/bin/php
 <?php
 
-require_once "vendor/autoload.php";
+if (file_exists(__DIR__.'/vendor/autoload.php')) {
+    require __DIR__.'/vendor/autoload.php';
+} else {
+    require __DIR__.'/../../autoload.php';
+}
 
 use Goutte\Client;
 
@@ -166,5 +170,3 @@ if (!favicon($strSite)) {
 } else {
     out("Favicon ok", 'green');
 }
-
-

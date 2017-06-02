@@ -1,5 +1,19 @@
 {
+    "name": "gravatalonga/ready2web",
+    "description": "Check if website is ready to deploy with basic configurations. Like, robots, sitemap.xml, etc.",
+    "authors": [
+        {
+            "name": "Jonathan Fontes",
+            "email": "jonathan.alexey16@gmail.com"
+        }
+    ],
     "require": {
         "fabpot/goutte": "^3.2"
-    }
+    },
+    "autoload": {
+        "classmap": ["src"]
+    },
+    "bin": [
+        "ready2web"
+    ]
 }
